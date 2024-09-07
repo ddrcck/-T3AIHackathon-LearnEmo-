@@ -1,0 +1,153 @@
+/* Genel Stil */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8fafc;
+}
+
+/* AppBar Tasarımı */
+.app-bar {
+    background-color: #1e3a8a;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 40px;
+    margin-right: 15px;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; 
+    margin-right: 50px;/* Profil ikonunu sağa yasla */
+    margin-left: auto;
+    padding-right: 30px; /* Sağdan boşluk ekle */
+}
+
+.profile-icon {
+    height: 70px;
+    border-radius: 50%;
+    background-color: white;
+    margin-right: 0;
+    margin-left: 20px; /* Soldan biraz boşluk bırak */
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap'); /* Poppins fontunu ekledik */
+
+.welcome-section {
+    margin-top: 100px; /* Daha fazla yukarıdan boşluk */
+    padding: 40px 20px; /* Yandan boşluk ekleme */
+    text-align: left; /* Soldan hizalama */
+    background-color: transparent; /* Arka plan boş */
+}
+
+.welcome-section h2 {
+    font-size: 3em; /* Yazı boyutu */
+    color: #1e3a8a; /* Yazı rengi */
+    font-weight: normal; /* Normal kalınlık */
+    margin: 10px 0 10px 0; /* Yukarıdan boşluk ekledik */
+    letter-spacing: 1px; /* Harf aralığı ekleme */
+    font-family: 'Poppins', sans-serif; /* Poppins fontunu kullandık */
+}
+
+/* Dashboard ve Kartlar */
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px; /* Kartlar arası boşluk arttırıldı */
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    justify-items: center; /* Ortalama */
+}
+
+.card {
+    background-color: white;
+    border-radius: 15px; /* Yuvarlak köşeler */
+    padding: 10px;
+    box-shadow: 5px 6px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+    text-align: center;
+    transition: all 0.3s ease; /* Tüm geçiş efektleri */
+    cursor: pointer;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Baykuş Animasyonu */
+.owl {
+    position: absolute;
+    top: -50px; /* Başlangıç pozisyonu */
+    left: 10px; /* Sağ üst köşeye yakın */
+    width: 100px; /* Baykuşun genişliği */
+    height: 100px; /* Baykuşun yüksekliği */
+    background-image: url('owl.gif'); /* Baykuş animasyonunun yolu */
+    background-size: cover;
+    transition: top 0.4s ease, opacity 0.4s ease; /* Geçiş efektleri */
+    opacity: 0; /* Başlangıçta görünmez */
+}
+
+.card:hover .owl {
+    top: 10px; /* Hover'da yukarıdan aşağıya hareket eder */
+    opacity: 1; /* Görünür hale gelir */
+}
+
+/* Kart Hover Efekti */
+.card:hover {
+    transform: translateY(-10px) scale(1.05); /* Kart yukarı çıkacak ve büyüyecek */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Daha belirgin gölge */
+}
+
+.card h3 {
+    margin-top: 0;
+    font-size: 1.8em;
+    color: #1e3a8a;
+    font-weight: bold;
+}
+
+.card p {
+    font-size: 1.1em;
+    color: #4b5563;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+.action-btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #1e3a8a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card:hover .action-btn {
+    background-color: #2563eb;
+}
+
+.action-btn:hover {
+    background-color: #3b82f6;
+}

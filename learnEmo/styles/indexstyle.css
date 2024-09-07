@@ -1,0 +1,457 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior:smooth;
+}
+body{
+    background:rgb(173, 187, 218);
+    color: beige;
+}
+
+
+
+/*--*/
+#navbar {
+    width: 100%;
+    background-color: #005b8d; /* Tek renk arka plan */
+    background-size: cover;
+    background-position: center;
+    border: 0px solid rgb(152, 161, 227); /* Border ekledik */
+    border-radius: 0 0 12px 12px; /* Yalnızca alt köşeleri yuvarlat */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+}
+
+/*---*/
+
+.container{
+    padding: 10px 5% ;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo{
+    width: 540px;
+}
+nav ul li{
+    display:inline-block;
+    list-style: none;
+    margin:10px 20px ;
+}
+
+/*---*/
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 10px;
+    position: relative;
+  
+    display: inline-block; /* Kenar boşlukları ile şekil vermek için inline-block */
+    transition: all 0.3s ease; /* Hover efekti için geçiş animasyonu */
+}
+
+nav ul li a:hover {
+   /* Hover sırasında gradient tersine döner */
+    border-color: rgb(173, 187, 218); /* Hover ile sınır rengini değiştir */
+    color: #fff; /* Hover ile yazı rengini beyaz yap */
+}
+
+/*---*/
+
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #d47a97;
+    position: absolute;
+    left:0;
+    bottom: -6px;
+    transition:0.5s ;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+/*#header{
+    
+    width: 100%;
+    height: 100vh;
+    background-color:rgb(237, 232, 245);
+}*/
+
+#header {
+    width: 100%;
+    height: 100vh;
+    background: white;
+    border: 0px solid #adbbda; /* Dış border */
+   
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Gölge eklemek istersen */
+}
+
+
+.animated {
+    width: 100px;
+    height: 100px;
+    animation: bounce 2s;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    z-index: 1;
+    position: absolute;
+
+}
+  
+@keyframes bounce {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-100px); }
+    100% { transform: translateY(0); }
+}
+.leftcolumn,.rightcolumn{
+    flex-basis: 50%;
+
+}
+
+.rightcolumn h1 {
+    margin: 100px 20px 10px 20px;
+    font-size: 60px;
+    color:#006BA5; /* Örneğin, domates kırmızısı */
+}
+.rightcolumn h3 {
+    margin: 20px 20px 10px 20px;
+    font-size: 15px;
+    color:#006BA5; /* Örneğin, domates kırmızısı */
+}
+
+/* about */
+#about {
+    padding: 80px 20px 0 0;
+    text-align: center; /* Tüm içerik için ortalama */
+}
+
+.row {
+    display: flex;
+    justify-content: space-between; /* İçeriklerin köşelere yayılması */
+    align-items: center; /* Dikey hizalama */
+    flex-wrap: wrap; /* Taşma durumunda sar */
+}
+
+.about-col1 {
+    flex: 0 0 20%; /* Genişlik ayarı */
+}
+
+.about-col2 {
+    flex: 0 0 60%; /* Orta bölüm için uygun genişlik */
+    display: flex;
+    flex-direction: column; /* Dikey hizalama */
+    align-items: center; /* Yatay ortalama */
+}
+
+.about-col1 img {
+    width: 100%; /* Genişliği konteynerin tamamına yay */
+    max-width: 150px; /* Maksimum genişlik */
+    height: auto; /* Yükseklik otomatik olarak genişliğe göre ayarlansın */
+    margin: 10px 0; /* Üst ve alt tarafa boşluk ekleyelim */
+    border-radius: 10px; /* Köşeleri yuvarlaklaştırmak için */
+}
+
+.subtitle {
+    margin-top: 50px; /* Yukarıdan boşluk */
+    font-size: 60px; /* Düzgün boşluk */
+    font-weight: 600;
+    font-style: italic;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #000000;
+    text-align: center; /* Başlık ortalanmalı */
+}
+
+.tab-titles {
+    display: flex; /* Yatay hizalama */
+    justify-content: center; /* Ortala */
+    margin: 20px 0; /* Üst ve alt boşluk */
+}
+
+.tab-links {
+    margin: 0 15px; /* Her bağlantı arasında boşluk */
+}
+
+.content {
+    margin: 10px 0; /* İçeriklerin üst ve alt boşluğu */
+    text-align: center; /* İçerik metinleri ortalanmalı */
+}
+.tab-titles {
+    display: flex; /* Yatay hizalama */
+    justify-content: center; /* Ortala */
+    margin: 20px 0; /* Üst ve alt boşluk */
+}
+
+.tab-links {
+    margin: 0 15px; /* Her bağlantı arasında boşluk */
+}
+
+.content {
+    margin: 10px 0; /* İçeriklerin üst ve alt boşluğu */
+    text-align: center; /* İçerik metinleri ortalanmalı */
+}
+.tab-titles {
+    margin: 20px 0; /* Üst ve alt boşluk */
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right:50px ;
+    font-size: 20 px;
+    font-weight:500 ;
+    cursor: pointer;
+    position: relative;
+    font-family: cursive;
+
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 5px;
+    background: #000000;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active::after{
+    width: 75%;
+}
+.content ul li{
+    list-style: circle;
+    margin:10px 0;
+}
+.content{
+    display: none;
+}
+.content.active-one{
+    display: block;
+}
+/*-------*/
+#donate{
+    padding: 30px ;
+}
+.donete-cont {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.donete-cont div {
+    background-color: #006BA5; /* Arka plan rengi */
+    padding: 55px; /* İçerik içi boşluğu azalt */
+    border-radius: 50px; /* Köşeleri yuvarlaklaştır */
+    text-align: center; /* Metin ortalama */
+    height: 250px; /* Yüksekliği ayarlayın */
+    overflow: hidden; /* Taşmayı önle */
+}
+.donete-cont div img{
+    font-size: 50px;
+    margin-bottom: 30px;
+    margin-left: 90px;
+}
+.donete-cont div h1{
+     font-size:30px;
+     font-weight: 500;
+     margin-bottom: 15px;
+     font-family: cursive ;
+}
+.donete-cont div a{
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 40px;
+    padding: 10px 15px;
+    font-size: 24px;
+    text-align: center;
+    font-family: Verdana;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #21707c;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    text-decoration: none;
+}
+.donete-cont div a:hover {background-color: #e06666}
+
+.donete-cont div a:active {
+  background-color: #430642;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.donete-cont div:hover{
+    background-color: #9c72b1;
+    transform:translateY(-20px) ;
+}
+
+/*contact part----*/
+#contact{
+    margin-top: 0px;
+    background-color: #ffffff;
+    height: 600px;
+    border-radius: 50px; 
+
+}
+/* E-posta ve telefon metinleri için renk */
+#contact .left-col p {
+    color: #9892e0; /* Mail ve telefon rengini değiştirmek için */
+}
+
+
+
+.left-col{
+    flex-basis: 35%;
+}
+.right-col{
+    flex-basis: 60%;
+}
+.left-col p{
+    margin-top: 30px;
+    font-size: 20px;
+}
+.left-col p img{
+    margin-right: 15px;
+    width: 20px;
+
+}
+.social-media{
+    margin-top: 30px;
+
+}
+.social-media a{
+    margin-top: 30px;
+    margin-right: 15px;
+    display: inline-block;
+    
+}
+.social-media a:hover{
+    transform: translateY(-5px);
+}
+.btn{
+    display:inline-block block;
+    margin: 10px auto;
+    width: fit-content;
+    border:3px solid #522668;
+    padding: 14px 50px;
+    border-radius: 8px;
+    background:#87c9ec;
+    font-style: italic;
+    font-family: Cambria;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+}
+.right-col form{    
+    width: 100%;
+    margin: 50px;
+}
+form input,form textarea{
+
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #93bdd3;
+    padding: 15px;
+    margin: 15px 0;
+    color: #000000;
+    border-radius: 6px;
+
+}
+
+nav .small-screen{
+    display:none;
+}
+/*for small screen*/
+@media only screen and (max-width: 600px){
+    #navbar{
+        width:auto;
+        background-color: #c7805d;
+    }
+    #header {
+       background-color: #c7805d ;
+        width: auto;
+        height: fit-content;
+    
+
+    }
+    .left-image img{
+        max-width: 200px;
+        height: auto;
+    }
+    .rightcolumn h1{
+        font-size:10px ;
+    }
+    nav .small-screen{
+        display:block;
+        size:25px;
+    }
+    nav ul{
+        background: #430642;
+        position: fixed;
+        top:0px;
+        right: -200px;
+        width:200px;
+        height: 100%;
+        padding-top: 50px;
+        z-index: 2;
+        transition:0.5s ;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul img{
+        position: absolute;
+        top: 25px;
+        left:25px ;
+        cursor: pointer;
+    }
+    #about{
+    
+        padding: 5px 0;
+    }
+    .about-col1{
+        margin-left: 80px;
+    }
+    .about-col2 img{
+        max-width: 200px;
+        height: auto;
+        margin-left: 100px;
+    }
+    #contact{
+        margin-top: 50px;
+        background-color:rgb(49, 134, 168);
+        height: auto;
+        background-size: cover;
+    
+    }
+    .left-col,.right-col{
+        flex-basis: 100%;
+
+    }
+    .right-col form{    
+        width: auto;
+        margin: 30px;
+    }
+    footer{
+        font-size: 14px;
+    }
+
+}

@@ -1,0 +1,242 @@
+/* DotLottie player için konum */
+dotlottie-player {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  width: 300px;
+  height: 300px;
+}
+
+/* Genel stil */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #b2d6f7; /* Arka plan rengi */
+  overflow: hidden;
+}
+
+/* Chatbot container */
+#chatbot-container {
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  border: 2px solid #1111f6; /* Siyah çerçeve */
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgb(79, 120, 255);
+}
+
+/* Chatbot header */
+#chatbot-header {
+  background-color: #673dff;
+  color: #fff;
+  padding: 8px; /* Başlık için daha küçük padding */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+/* Mesajların bulunduğu kaydırılabilir alan */
+#chatbot-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  overflow-y: auto;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Mesaj kutuları */
+#chatbot-messages {
+  display: flex;
+  flex-direction: column;
+  gap: 5px; /* Mesajlar arası mesafe */
+  padding: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+/* Genel mesaj stili */
+/* Mesaj kutusunun genel stili */
+.message {
+  position: relative;
+  max-width: 70%;
+  padding: 8px;
+  border-radius: 20px;
+  margin: 2px 0;
+  font-size: 14px;
+  position: relative;
+  word-wrap: break-word;
+}
+
+/* Like ve Dislike butonları */
+.feedback-buttons {
+  position: absolute;
+  right: 10px;
+  bottom: 5px;
+  display: flex;
+  gap: 5px; /* Butonlar arasında boşluk */
+}
+
+.like-button, .dislike-button {
+  border: none;
+  background: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.like-button:hover, .dislike-button:hover {
+  color: #007bff; /* Hover rengini ayarlayın */
+}
+
+
+/* Kullanıcı mesajları */
+.user-message {
+  align-self: flex-end;
+  background-color: #ffffff;
+  color: #ff2fac;
+  border: 2px solid #ff2fac;
+  box-shadow: 0 4px 8px rgba(255, 10, 153, 0.489);
+}
+
+/* Kullanıcı mesajı için baloncuk kuyruğu */
+.user-message::after {
+  content: '';
+  position: absolute;
+  right: -10px;
+  top: 10px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: #ffffff transparent transparent transparent;
+  border-right-color: #ff2fac;
+}
+
+/* Chatbot mesajları */
+.chatbot-message {
+  align-self: flex-start;
+  background-color: #f6f6f6;
+  color: #9204ff;
+  border: 2px solid #9204ff;
+  box-shadow: 0 4px 8px #cc7bff;
+}
+
+/* Chatbot mesajı için baloncuk kuyruğu */
+.chatbot-message::after {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 10px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: #ffffff transparent transparent transparent;
+  border-left-color: #9204ff;
+}
+
+/* Mesaj giriş kutusu */
+#chatbot-input {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #fc60c3;
+  background-color: #fff;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+}
+
+/* Mesaj yazma alanı */
+#message-input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ff76b6;
+  border-radius: 4px;
+  outline: none;
+  font-size: 14px;
+}
+
+/* Gönder butonu */
+#send-button {
+  padding: 8px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+#send-button:hover {
+  background-color: #068740;
+}
+
+/* Baloncuklar */
+.bubbles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.bubble {
+  position: absolute;
+  bottom: -100px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  animation: floatUp 10s infinite;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bubble:nth-child(1) {
+  left: 10%;
+  background: rgba(255, 99, 132, 0.5);
+  animation-duration: 2s;
+}
+
+.bubble:nth-child(2) {
+  left: 30%;
+  background: rgba(54, 162, 235, 0.5);
+  animation-duration: 4s;
+}
+
+.bubble:nth-child(3) {
+  left: 50%;
+  background: rgba(75, 192, 192, 0.5);
+  animation-duration: 6s;
+}
+
+.bubble:nth-child(4) {
+  left: 70%;
+  background: rgba(255, 206, 86, 0.5);
+  animation-duration: 8s;
+}
+
+.bubble:nth-child(5) {
+  left: 90%;
+  background: rgba(153, 102, 255, 0.5);
+  animation-duration: 10s;
+}
+
+@keyframes floatUp {
+  0% {
+      transform: translateY(100vh);
+      opacity: 0.2;
+  }
+  50% {
+      opacity: 0.6;
+  }
+  100% {
+      transform: translateY(-100vh);
+      opacity: 0;
+  }
+}

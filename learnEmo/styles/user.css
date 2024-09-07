@@ -1,0 +1,185 @@
+/* Genel stil ayarları */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Balonlar dışarı taşmasın diye */
+    position: relative;
+}
+
+/* Form container'ı */
+.container-form {
+    background: rgb(173, 187, 218);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    z-index: 1; /* Balonların arka planda kalması için */
+}
+
+/* Başlık */
+h1 {
+    color: #fff;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+/* Hata mesajı */
+.error-msg {
+    display: block;
+    color: #ff6b6b;
+    margin-bottom: 10px;
+}
+
+/* Giriş alanları */
+input[type="text"], 
+input[type="email"], 
+input[type="password"] {
+    width: 100%;
+    padding: 15px 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 14px;
+}
+
+/* Giriş alanları placeholder rengi */
+input::placeholder {
+    color: #ddd;
+}
+
+/* Buton */
+.btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background: #ff4081;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 25px;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background: #e91e63;
+}
+
+/* Kayıt linki */
+p {
+    color: #fff;
+    margin-top: 20px;
+}
+
+p a {
+    color: #ff4081;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+/* Balonlar */
+.balloon-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 0; /* Formun arkasında kalmaları için */
+}
+
+.balloon {
+    width: 60px;
+    height: 80px;
+    background-color: #ff5e5e;
+    border-radius: 50% 50% 45% 45%;
+    position: absolute;
+    bottom: -100px; /* Balonlar başlangıçta görünmesin */
+    animation: float 5s ease-in-out infinite; /* Animasyon süresini kısalttık */
+    opacity: 0.7; /* Hafif transparan balonlar */
+}
+
+.balloon:nth-child(1) {
+    background-color: #ff5e5e;
+    animation-duration: 5s;
+    animation-delay: 0s;
+    left: 10%;
+}
+
+.balloon:nth-child(2) {
+    background-color: #ffaf5e;
+    animation-duration: 6s;
+    animation-delay: 1s;
+    right: 10%; /* Sağdan uçacak */
+}
+
+.balloon:nth-child(3) {
+    background-color: #5e9fff;
+    animation-duration: 7s;
+    animation-delay: 2s;
+    left: 30%;
+}
+
+.balloon:nth-child(4) {
+    background-color: #9d5eff;
+    animation-duration: 8s;
+    animation-delay: 3s;
+    right: 30%; /* Sağdan uçacak */
+}
+
+.balloon:nth-child(5) {
+    background-color: #5effb8;
+    animation-duration: 5s;
+    animation-delay: 0.5s;
+    left: 50%;
+}
+
+.balloon:nth-child(6) {
+    background-color: #ff5ea5;
+    animation-duration: 6s;
+    animation-delay: 1.5s;
+    right: 50%; /* Sağdan uçacak */
+}
+
+/* Daha fazla balon ekleyebiliriz */
+.balloon:nth-child(7) {
+    background-color: #ff8e8e;
+    animation-duration: 4s;
+    animation-delay: 0.8s;
+    left: 70%;
+}
+
+.balloon:nth-child(8) {
+    background-color: #6effff;
+    animation-duration: 5s;
+    animation-delay: 1.3s;
+    right: 70%;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.7;
+    }
+    50% {
+        transform: translateY(-300px) rotate(45deg); /* Daha kısa mesafe */
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-600px) rotate(90deg); /* Daha hızlı çıkış */
+        opacity: 0;
+    }
+}
