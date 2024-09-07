@@ -14,8 +14,8 @@ EmoLearn, çocukların duygusal zeka becerilerini artırmayı amaçlayan AI dest
 
 ## Uygulamadan Ekran Görüntüleri
 
-![Ana Sayfa](path/to/screenshot1.png)
-![Duygu Tanıma](path/to/screenshot2.png)
+![Ana Sayfa](path/to/Ekran görüntüsü 2024-09-07 104255-png)
+![Duygu Tanıma](path/to/Ekran Görüntüsü (502).png)
 ![Duygusal Farkındalık Eğitimi](path/to/screenshot3.png)
 ![Stres Yönetimi](path/to/screenshot4.png)
 
