@@ -6,11 +6,6 @@
 
 EmoLearn, çocukların duygusal zeka becerilerini artırmayı amaçlayan AI destekli bir eğitim platformudur. Çocuklara duygusal farkındalık, etkileşim testleri ve stres yönetimi konusunda rehberlik ederek, duygusal becerilerini geliştirmelerine yardımcı olur.
 
-## Takım Adı: Zeyna-AI 
-- 👤 RABİA SENA YENER  
-- 👤 DİDAR İLAYDA ÇİÇEK
-- 👤 ZEYNEP KIZILAY 
-- 👤 ESRANUR ULUSOY
 
 ## Uygulamadan Ekran Görüntüleri
 
